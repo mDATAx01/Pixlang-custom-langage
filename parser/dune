@@ -1,0 +1,17 @@
+(ocamllex
+ (modules Lexer))
+
+(menhir
+ (modules Parser)
+ (flags --dump --table --inspection --explain --automaton-graph --cmly))
+
+(rule
+ (deps Parser.cmly)
+ (target Cmly.ml)
+ (action
+  (run ocaml-crunch --mode=plain --ext=cmly --output=Cmly.ml .)))
+
+(library
+ (name language_parser)
+ (package pixlang)
+ (libraries menhirLib ast))
