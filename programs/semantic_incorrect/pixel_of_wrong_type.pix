@@ -1,0 +1,4 @@
+$<
+    Pixel:p;
+    Set(p,Pixel(Color(1,2,3),Coord(1,2)))
+>$

@@ -1,0 +1,5 @@
+$<
+    Int:x;
+    Int:y;
+    Set(x,y)
+>$

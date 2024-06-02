@@ -1,0 +1,7 @@
+$<
+    Int:x;
+    For x From True To 3.2 Step Coord(1,2)
+    $<
+        Set(x,4)
+    >$
+>$

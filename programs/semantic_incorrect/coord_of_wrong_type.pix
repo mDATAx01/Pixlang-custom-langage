@@ -1,0 +1,4 @@
+$<
+    Coord:p;
+    Set(p,Coord(Coord(2,3),3.5))
+>$

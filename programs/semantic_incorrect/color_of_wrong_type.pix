@@ -1,0 +1,4 @@
+$<
+    Color:c;
+    Set(c,Color(2.5,Coord(2,3),True))
+>$

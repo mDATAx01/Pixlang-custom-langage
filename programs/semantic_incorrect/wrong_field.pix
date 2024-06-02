@@ -1,0 +1,6 @@
+$<
+    Coord:p;
+    Int:x;
+    Set(p,Coord(1,2));
+    Set(x,p.Blue)
+>$

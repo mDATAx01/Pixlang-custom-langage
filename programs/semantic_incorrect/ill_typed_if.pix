@@ -1,0 +1,4 @@
+$<
+    Int:x;
+    If(3) Set(x,1) Else Set(x,2)
+>$

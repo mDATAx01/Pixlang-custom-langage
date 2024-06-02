@@ -1,0 +1,4 @@
+$<
+    Int:x;
+    Foreach y In 3 Set(x,y)
+>$

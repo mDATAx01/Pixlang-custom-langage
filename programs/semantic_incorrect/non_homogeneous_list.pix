@@ -1,0 +1,4 @@
+$<
+    List(Int):l;
+    Set(l,[1,1.2,True,Coord(1,2)])
+>$
