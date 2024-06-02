@@ -1,0 +1,4 @@
+(library
+ (name analyser)
+ (package pixlang)
+ (libraries ast util))
