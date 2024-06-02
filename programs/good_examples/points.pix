@@ -1,0 +1,7 @@
+// dessine les quatre coins d'un carré
+$<
+    Draw(Pixel(Coord(20,20), Color(0, 0, 0)));
+    Draw(Pixel(Coord(100,20), Color(0, 0, 0)));
+    Draw(Pixel(Coord(20,100), Color(0, 0, 0)));
+    Draw(Pixel(Coord(100,100), Color(0, 0, 0)))
+>$

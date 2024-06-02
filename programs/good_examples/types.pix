@@ -1,0 +1,42 @@
+// définit des variables et les initialise
+$<
+    // définitions
+    Int:k;
+    Int:l;
+    Real:x;
+    Bool:b;
+    Coord:p;
+    Color:c;
+    Pixel:pt;
+    List(Int):lst;
+
+    // Affectations bien typées
+    Set(k, 6+36-7*2%7);
+    Set(l, k);
+    Set(x, 66.0+36.5-7.2*2.5/56.3);
+    Set(b, True And False Or Not True);
+    Set(p, Coord(1+2, 7-5));
+    Set(c, Color(255, 255, 255));
+    Set(pt, Pixel(p, c));
+    Set(lst, []);
+    Set(lst, [1, 2, 3]);
+    Set(k, Head(lst));
+    Set(lst, Tail(lst));
+    Set(lst, 5:: lst);
+    Set(lst, [0, 1, 2] + [3, 4, 5]);
+    
+    // Slots
+    Set(k, p.X);
+    Set(p.X, 36);
+    Set(p.X, Coord(1+2, 7-5).Y);
+
+    Set(k, c.Red);
+    Set(c.Blue, Color(255, 255, 255).Green);
+
+    Set(c, pt.Color);
+    Set(pt.Color, Pixel(Coord(0, 0), Color(255, 255, 255)).Color);
+
+    Set(c.Red, pt.Color.Red);
+    Set(pt.Color.Red, Pixel(Coord(0, 0), Color(255, 255, 255)).Color.Red)
+
+>$

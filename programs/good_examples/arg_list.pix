@@ -1,0 +1,13 @@
+<
+List(Int) : l;
+Int : length
+>
+$<
+    Int : x;
+    Foreach x In l
+        $<
+        Int :y;
+        For y From 0 To length Step 1
+            Draw(Pixel(Coord(x,y),Color(0,0,0)))
+        >$
+>$

@@ -1,0 +1,13 @@
+$<
+    Int : x;
+    Real : y;
+    Color : c;
+    Coord : p;
+    If (True) Set(x,4+5*4-7/2+75%17)
+    Else Set(x,72);
+    If (False) Set(y,4.2+9.5*5.4/7.1+47.6%4.2)
+    Else Set(y,7.2);
+    For x1 From 4 To 2 Step 1 Print (0);
+    Foreach x1 In [] Print (1);
+    For x1 From 0 To 200 Step 1 Draw(Pixel(Coord(x,74*2)*2+x1,Color(Floor(Real_of_int(Floor(y))),0,x/7)%255))
+>$

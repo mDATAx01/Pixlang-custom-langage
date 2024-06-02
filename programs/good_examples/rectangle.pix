@@ -1,0 +1,27 @@
+// Dessine un rectangle cyan et magenta
+$<
+    Int : x;
+    Int : y;
+    Int : xMin;
+    Int : yMin;
+    Int : xMax;
+    Int : yMax;
+    Set(xMin, 0);
+    Set(yMin, 0);
+    Set(xMax, 200);
+    Set(yMax, 100);
+    Color : magenta;
+    Set(magenta, Color(255, 0, 255));
+    Color : cyan;
+    Set(cyan, Color(0, 255, 255));
+    For x From xMin To xMax Step 1 
+        $<
+            Draw(Pixel(Coord(x, yMin), magenta));
+            Draw(Pixel(Coord(x, yMax), magenta))
+        >$;
+    For y From yMin To yMax Step 1 
+        $<
+            Draw(Pixel(Coord(xMin, y), cyan));
+            Draw(Pixel(Coord(xMax, y), cyan))
+        >$
+>$

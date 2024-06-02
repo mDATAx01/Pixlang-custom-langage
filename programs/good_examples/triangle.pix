@@ -1,0 +1,49 @@
+// Dessine un triangle
+// Exemple sur les champs (fields)
+$<
+    Coord:a;
+    Coord:b;
+    Coord:c;
+    Int:x;
+    Set(a.X, 10);
+    Set(a.Y, 10);
+    Set(b.X, 200);
+    Set(b.Y, 10);
+    Set(c.X, 100);
+    Set(c.Y, 100);
+    Pixel:point;
+    Set(point.Color, Color(0, 0, 0));
+    Coord:currentPosition;
+    For x From a.X To b.X Step 1 $<
+        Set(currentPosition.X, x);
+        Set(currentPosition.Y, a.Y);
+        Set(point.Coord, currentPosition);
+        Draw (point)
+    >$;
+    Real:step;
+    Int:deltaX;
+    Set(deltaX, (c.X - a.X));
+    Int:deltaY;
+    Set(deltaY, (c.Y - a.Y));
+    Set(step, Real_of_int(deltaY) / Real_of_int(deltaX));
+    Real:i;
+    Set(i, Real_of_int(a.Y));
+    For x From a.X To c.X Step 1 $<
+        Set(currentPosition.X, x);
+        Set(currentPosition.Y, Floor(i * step));
+        Set(point.Coord, currentPosition);
+        Draw (point);
+        Set(i, i+step)
+    >$;
+    Set(deltaX, (b.X - c.X));
+    Set(deltaY, (b.Y - c.Y));
+    Set(step, Real_of_int(deltaY) / Real_of_int(deltaX));
+    Set(i, Real_of_int(c.Y));
+    For x From c.X To b.X Step 1 $<
+        Set(currentPosition.X, x);
+        Set(currentPosition.Y, Floor(i - step));
+        Set(point.Coord, currentPosition);
+        Draw (point);
+        Set(i, i+step)
+    >$
+>$

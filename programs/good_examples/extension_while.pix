@@ -1,0 +1,9 @@
+$<  
+    Int : i;
+    Set(i, 0);
+    While(i < 3) 
+    $<
+        Set(i, i+ 1);
+        Print(i);
+    >$
+>$

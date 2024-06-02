@@ -1,0 +1,35 @@
+// Dessine un cercle noir
+$<
+    Real : a;
+    Real : r;
+    Set(r, 200.0);
+    Int : offsetX;
+    Int : offsetY;
+    Int : center;
+    Set(center, 200);
+    Set(offsetX, Floor(r/2.0)); 
+    Set(offsetY, offsetX);
+    Color : c;
+    Set(c, Color(0, 100, 200)); 
+    For a From 0.0 To (30.0*Pi) Step 0.005
+    $<
+        Int : x;
+        Int : y;
+        Set(c, (c + Color(1,1,1)) % Color(255,255,255));
+        Set(x, Floor(Cos(a) * r)+center);
+        Set(y, Floor(Sin(a) * r)+center);
+        Real : a1;
+        For a1 From 0.0 To (2.0*Pi) Step 0.5
+        $<
+            Int : x1;
+            Int : y1;
+            Set(x1, Floor(Cos(a1) * 2.0) + x);
+            Set(y1, Floor(Sin(a1) * 2.0) + y);
+            Draw(Pixel(Coord(x1, y1), c))
+        >$;
+
+        If (r > 0.0)
+            Set(r, r - 0.01)
+    >$
+
+>$

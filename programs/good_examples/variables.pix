@@ -1,0 +1,21 @@
+// définit des variables et les initialise
+$<
+    // définitions
+    Int:k;
+    Int:l;
+    Real:x;
+    Bool:b;
+    Coord:p;
+    Color:c;
+    Pixel:pt;
+
+    // Affectations
+    Set(k, 6+36-7*2%7);
+    Set(l, k);
+    Set(x, 66.2+36.5-7.2*2.1/56.0);
+    Set(b, True And False Or Not True);
+    Set(p, Coord(1+2, 7-5) * 18);
+    Set(c, Color(125, 125, 125) + 4);
+    Set(pt, Pixel(p, c));
+    Draw(pt)
+>$

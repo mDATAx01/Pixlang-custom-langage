@@ -1,0 +1,30 @@
+$<
+    Int : x;
+    Set(x,200);
+    Real : y;
+    For y From 10.0 To 100.0 Step 10.0
+    $<
+        Real : x;
+        Color : c;
+        Int : center;
+        Set(c,Color(100,100+Floor(y),100-Floor(y)));
+        Set(center,150);
+        For x From 0.0 To 2.0*Pi Step 0.005
+        $<
+            Int : a;
+            Int : b;
+            Set(c,(c+1) % 255);
+            Set(a, Floor(Cos(x) * y)+center);
+            Set(b, Floor(Sin(x) * y)+center);
+            Draw(Pixel(Coord(a, b), c))
+        >$
+    >$;
+    Int : z;
+    For z From 0 To 10 Step 1
+    $<
+        Draw(Pixel(Coord(x+z,x),Color(0,0,0)));
+        Draw(Pixel(Coord(x+z,x+z),Color(0,0,0)));
+        Draw(Pixel(Coord(x-z,x),Color(0,0,0)));
+        Draw(Pixel(Coord(x-z,x-z),Color(0,0,0)))
+    >$
+>$

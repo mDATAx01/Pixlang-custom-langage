@@ -1,0 +1,7 @@
+$<   
+Int : x;
+Set(x, 9);
+Print(x);
+Set(x, x **2);
+Print(x);
+>$

@@ -1,0 +1,25 @@
+// Dessine un cercle multicolore
+< >
+$<
+    Real  : a;
+    Real  : r;
+    Set(r,100.0);
+    Int : offsetX;
+    Int : offsetY;
+    Int : center;
+    Set(center,100);
+    Set(offsetX, Floor(r/2.0)); 
+    Set(offsetY, offsetX);
+    Color : c;
+    Set(c,Color(0,100,200)); 
+    For a From 0.0 To (2.0*Pi) Step 0.005
+    $<
+        Int : x;
+        Int : y;
+        Set(c,(c+1) % 255);
+        Set(x, Floor(Cos(a) * r)+center);
+        Set(y, Floor(Sin(a) * r)+center);
+        Draw(Pixel(Coord(x, y), c))
+    >$
+
+>$

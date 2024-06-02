@@ -1,0 +1,11 @@
+// Listes
+$<
+    List(Int) : l;
+    Int : h;
+    Set(l, [1, 2, 3]);
+    Set(l, []);
+    Set(l, 1::2::3::[]);
+    Set(l, 0:: l);
+    Set(h, Head(l));
+    Set(l, Tail(l))
+>$

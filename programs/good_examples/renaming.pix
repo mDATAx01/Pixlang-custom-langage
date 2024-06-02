@@ -1,0 +1,26 @@
+<
+    Int : x;
+    Real : y
+>
+$<
+    Set(x,2*x);
+    Real : x;
+    Set(x,2.0*y);
+    Int : y;
+    Set(y,Floor(x));
+    $<
+        Int : x;
+        Set(x,2*y);
+        Int : y;
+        Set(y,2*x);
+    >$;
+    Set(y,2*y);
+    $<
+        Coord : x;
+        Set(x,Coord(y,y));
+        Color : y;
+        Set(y,Color(x.X,x.X,x.X));
+        Draw(Pixel(x,y));
+    >$;
+    Set(x,2.2*x);
+>$

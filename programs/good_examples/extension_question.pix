@@ -1,0 +1,5 @@
+$<   
+Int : x; 
+(True) ? Set(x,5) : Set(x,10);
+Print(x);
+>$

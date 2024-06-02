@@ -1,0 +1,23 @@
+// Instructions
+$<
+    Int:x;
+    Set(x, 36);
+    Int:y;
+    Set(x, 36);
+    If (x < 120) 
+        Set(x, x+1);
+    If (x < 120) 
+        Set(x, x+1)
+    Else
+        Set(x, x-1);
+    For x From 1 To 120 Step 2 
+        Set(y, y+x);
+    Foreach x In [1, 2, 3, 4, 5, 6]
+        Set(y, y+x);
+    Draw(Pixel(Coord(3, 3), Color(255, 255, 255)));
+    If (x < 120) 
+    $<
+        Set(x, x+1);
+        Set(x, x+1)
+    >$
+>$

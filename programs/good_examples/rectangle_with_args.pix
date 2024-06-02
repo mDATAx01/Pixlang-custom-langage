@@ -1,0 +1,21 @@
+<
+Coord : base;
+Int : width;
+Int : height
+>
+$<
+    Int : x;
+    Print(base);
+    Print(width);
+    Print([1,2,3]);
+    For x From 0 To width Step 1
+        $<
+            Draw(Pixel(base + Coord(x,0),Color(0,0,0)));
+            Draw(Pixel(base + Coord(x,height),Color(0,0,0)))
+        >$;
+    For x From 0 To height Step 1
+        $<
+            Draw(Pixel(base + Coord(0,x),Color(0,0,0)));
+            Draw(Pixel(base + Coord(width,x),Color(0,0,0)))
+        >$
+>$
