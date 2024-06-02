@@ -1,0 +1,4 @@
+(executables
+ (names main visualiser)
+ (public_names interpreter parser_visualiser)
+ (libraries ast language_parser interpreter cairn analyser))
