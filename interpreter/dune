@@ -1,0 +1,4 @@
+(library
+ (name interpreter)
+ (package pixlang)
+ (libraries ast util graphics))
