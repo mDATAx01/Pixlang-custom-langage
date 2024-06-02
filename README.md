@@ -1,4 +1,4 @@
-#PIXLANG: a custom programing langage
+#PIXLANG: a custom programing langage#
 
 Pixlang is a mini-imperative language that allows for manipulating basic values (integers, reals, and booleans), 
 as well as predefined structured types (coordinates, colors, pixels, and lists). It also allows for displaying 
